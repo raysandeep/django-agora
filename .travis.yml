@@ -19,9 +19,7 @@ matrix:
   - python: pypy3
     env: DJANGO=master
   fast_finish: true
-install: pip install tox-travis
+install: pip install tox-travis codecov
 script: tox
-install:
-  - pip install codecov
 after_success:
   - codecov
