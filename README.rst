@@ -7,6 +7,10 @@ Django-Agora
     :target: https://badge.fury.io/py/django-agora
     :alt: Agora
 
+.. image:: https://travis-ci.org/raysandeep/django-agora.svg
+   :target: https://travis-ci.org/raysandeep/django-agora
+   :alt: Build Status
+
 Django-Agora is a Django app to help integrating Video Calling Feature Using Agoro.io .
 
 Detailed documentation is in the "docs" directory.
