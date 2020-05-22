@@ -1,0 +1,25 @@
+dist: xenial
+language: python
+python:
+- 3.6
+- 3.7
+- 3.8
+- pypy3
+cache: pip
+env:
+- DJANGO=master
+matrix:
+  allow_failures:
+  - python: 3.6
+    env: DJANGO=master
+  - python: 3.7
+    env: DJANGO=master
+  - python: 3.8
+    env: DJANGO=master
+  - python: pypy3
+    env: DJANGO=master
+  fast_finish: true
+install: pip install tox-travis coveralls
+script: tox
+after_success:
+- coveralls
