@@ -21,5 +21,7 @@ matrix:
   fast_finish: true
 install: pip install tox-travis codecov
 script: tox
+install:
+  - pip install --user codecov
 after_success:
-- codecov
+  - codecov
