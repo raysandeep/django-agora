@@ -1,0 +1,5 @@
+include LICENSE
+include README.rst
+recursive-include agora/static *
+recursive-include agora/templates *
+recursive-include docs *
