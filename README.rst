@@ -1,6 +1,7 @@
-=====
+
+==============
 Django-AgoraVC
-=====
+==============
 
 Django-Agora is a Django app to help integrating Video Calling Feature Using Agoro.io .
 
@@ -18,6 +19,9 @@ Quick start
 
 2. Include the agora URLconf in your project urls.py like this::
 
-    path('agora/', include('agora.urls')),
+    path('agora/',Agora.as_view(
+        app_id='<APP_ID>',
+        channel='<CHANNEL_ID>'
+    )),
 
-3. Visit http://127.0.0.1:8000/agora/ to participate in the vc.
+3. Visit http://127.0.0.1:8000/agora/ to participate in the Video Call.
