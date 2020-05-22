@@ -1,7 +1,7 @@
 
-==============
-Django-AgoraVC
-==============
+============
+Django-Agora
+============
 
 .. image:: https://badge.fury.io/py/django-agora.svg
     :target: https://badge.fury.io/py/django-agora
