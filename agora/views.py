@@ -22,10 +22,8 @@ class AgoraVideoCall(View):
     
     def checkAppID(self,appId):
         if appId == '':
-            print('F')
             return False
         else:
-            print('T')
             return True
     
     def checkChannel(self,channel):
@@ -35,7 +33,7 @@ class AgoraVideoCall(View):
             return True
 
     def checkAll(self,request):
-        if self.get_permission(request,self.permission_class) == True and self.checkAppID(self.app_id) == True  and self.checkChannel(self.app_id) == True:
+        if self.get_permission(request,self.permission_class) == True and self.checkAppID(self.app_id) == True  and self.checkChannel(self.channel) == True:
             return True
         else:
             return False
@@ -43,9 +41,10 @@ class AgoraVideoCall(View):
 
     def get(self,request):
         stat = self.checkAll(request)
+        print(self.app_id,self.channel)
         if stat:
             return render(request,'index.html',{
-                    'app_id':self.app_id,
+                    'agora_id':self.app_id,
                     'channel':self.channel,
                     'channel_end_url':self.channel_end_url
                     })
