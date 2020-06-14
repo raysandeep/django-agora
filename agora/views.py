@@ -9,6 +9,7 @@ class AgoraVideoCall(View):
     channel = ''
     permission_class = 'AllowAny'
     channel_end_url = '/success/'
+    title = 'Agora Demo'
 
     def get_permission(self,request,permission_class):
         if permission_class == 'AllowAny':
@@ -46,7 +47,8 @@ class AgoraVideoCall(View):
             return render(request,'index.html',{
                     'agora_id':self.app_id,
                     'channel':self.channel,
-                    'channel_end_url':self.channel_end_url
+                    'channel_end_url':self.channel_end_url,
+                    'title':self.title
                     })
         else:
             if not self.checkAppID(self.app_id):
@@ -65,6 +67,6 @@ class Agora(AgoraVideoCall):
     channel = ''
     permission_class = 'AllowAny'
     channel_end_url = '/success/'
-
+    title = 'Agora Demo'
 
 
